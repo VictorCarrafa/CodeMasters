@@ -1,0 +1,184 @@
+@charset "UTF-8"; /*define a codificação de caracteres*/
+
+/* Define o estilo do cabeçalho */
+header {
+    position: fixed;/* Fixar o cabeçalho no topo da página */
+    top: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho ao lado esquerdo da página */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    background-image: linear-gradient(to left, #F2BA52, #F2CD88, #F2A950); /* Fundo do cabeçalho em gradiente */
+    padding: 5px; /* Adiciona um pouco de espaçamento interno */
+    font-size: 15px;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    text-align: center; /* Alinha o texto no centro */
+    font-family: sans-serif;
+    text-shadow: 1px;
+}
+
+nav {
+    color: black;
+    padding: 5px; /* Adiciona um espaçamento interno */
+    box-shadow: 0px 3px 3px black; /* Adiciona uma sombra preta de 3 pixels na parte inferior */
+    text-align: center; /* Centraliza o texto e links dentro do nav */
+}
+
+/* Estilo para os links diretos dentro de <nav> */
+a {
+    color: black; /* Define a cor do texto */
+    padding: 6px; /* Adiciona um espaçamento interno de pixels ao redor do texto do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    transition-duration: 1s; /* Define a duração da transição para efeitos visuais ao passar o mouse */
+}
+
+/* Estilo para os links dentro de <nav> ao passar o mouse */
+.header a:hover {
+    color: #ff8c00; /* Muda a cor do texto para preto quando o mouse está sobre o link */
+}
+/*-------------------------------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte principal do documento como Arial ou uma fonte genérica sans-serif */
+    display: flex; /* Utiliza Flexbox para organizar o layout do body */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura do body como 100% da altura da viewport */
+    margin: 0; /* Remove a margem padrão do body */
+    background-color: #212426; /* Define a cor de fundo do body */
+    width: 100%; /* Define a largura do body como 100% */
+}
+
+.container {
+    width: 80%; /* Define a largura do container como 80% */
+    height: 85vh; /* Define a altura do container como 80% da altura da viewport */
+    display: flex; /* Utiliza Flexbox para organizar o layout do container */
+    box-shadow: 3px 3px 7px black; /* Adiciona uma sombra ao container */
+    background-color: #252729; /* Define a cor de fundo do container */
+    color: #ff8c00; /* Define a cor do texto dentro do container */
+    padding-right: 10rem; /* Adiciona um padding à direita do container */
+    margin: 0;
+}
+
+
+form {
+    width: 60%; /* Define a largura do formulário */
+    display: flex; /* Utiliza Flexbox para organizar o layout do formulário */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do formulário */
+    align-items: center; /* Centraliza o conteúdo verticalmente dentro do formulário */
+    flex-direction: column; /* Alinha os elementos do formulário em uma coluna */
+    padding: 3rem; /* Adiciona um padding ao redor do formulário */
+}
+
+.form-header {
+    margin-bottom: -2rem; /* Adiciona uma margem inferior ao cabeçalho do formulário */
+    display: flex; /* Utiliza Flexbox para organizar o layout do cabeçalho */
+    justify-content: space-around; /* Distribui o espaço igualmente ao redor dos elementos do cabeçalho */
+}
+
+.input-group {
+    display: flex; /* Utiliza Flexbox para organizar o layout do grupo de inputs */
+    flex-wrap: wrap; /* Permite que os elementos do grupo de inputs quebrem de linha */
+    justify-content: space-evenly; /* Distribui o espaço igualmente entre os elementos do grupo de inputs */
+    padding: 1.2rem 0; /* Adiciona padding vertical ao grupo de inputs */
+}
+
+.input-box {
+    display: grid; /* Utiliza Flexbox para organizar o layout da caixa de input */
+    flex-direction: column-reverse; /* Alinha os elementos da caixa de input em uma coluna */
+}
+
+.input-box input {
+    margin: 0.5rem 0; /* Adiciona uma margem superior e inferior aos inputs */
+    padding: 1rem 2rem; /* Adiciona padding aos inputs */
+    border: none; /* Remove a borda dos inputs */
+    border-radius: 5px; /* Define o raio de borda para inputs arredondados */
+    box-shadow: 1px 1px 6px; /* Adiciona uma sombra aos inputs */
+}
+
+.input-box input:hover {
+    background-color: rgb(190, 190, 190); /* Muda a cor de fundo dos inputs ao passar o mouse */
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.8rem; /* Define o tamanho da fonte */
+    font-weight: 600; /* Define a espessura da fonte como seminegrito */
+    color: #F2A950; /* Define a cor da fonte */
+}
+
+.gender-group {
+    display: flex; /* Utiliza Flexbox para organizar o layout do grupo de gênero */
+    justify-content: space-around; /* Distribui o espaço igualmente ao redor dos elementos do grupo de gênero */
+    margin-top: -1rem; /* Adiciona uma margem superior ao grupo de gênero */
+    padding: 0 0.5rem; /* Adiciona padding horizontal ao grupo de gênero */
+}
+
+.gender-input {
+    display: flex; /* Utiliza Flexbox para organizar o layout dos inputs de gênero */
+    align-items: center; /* Alinha verticalmente os elementos dos inputs de gênero */
+}
+
+.gender-input input {
+    margin-right: 0.3rem; /* Adiciona uma margem à direita dos inputs de gênero */
+}
+
+.gender-input label {
+    font-size: 0.80rem; /* Define o tamanho da fonte dos labels de gênero */
+    font-weight: 600; /* Define a espessura da fonte dos labels de gênero como seminegrito */
+    color: #F2CD88; /* Define a cor da fonte dos labels de gênero */
+}
+
+footer .save-button {
+    display: flex; /* Utiliza Flexbox para organizar o layout do botão de salvar */
+    font-family: sans-serif; /* Define a fonte do texto dentro do botão de salvar */
+    color: #ff8c00; /* Define a cor do texto do botão de salvar */
+    margin-top: 500px; /* Adiciona uma margem superior ao botão de salvar */
+    position: fixed; /* Fixa o footer na página */
+    height: auto; /* Define a altura do botão de salvar automaticamente */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+.save-button button {
+    width: 100%; /* Define a largura do botão */
+    margin-top: 2.5rem; /* Adiciona uma margem superior ao botão */
+    border-radius: 8px; /* Remove a borda do botão */
+    background-color: #ff8c00; /* Define a cor de fundo do botão */
+    color: white;
+    padding: 0.6rem; /* Adiciona padding ao botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro quando passa sobre o botão */
+}
+
+@media screen and (max-width: 1330px) {
+    .container {
+        width: 50%; /* Ajusta a largura do container para 50% em telas menores */
+    }
+
+    .form {
+        width: 100%; /* Ajusta a largura do formulário para 100% em telas menores */
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%; /* Ajusta a largura do container para 90% em telas menores */
+        height: auto; /* Ajusta a altura do container automaticamente em telas menores */
+    }
+
+    .input-group {
+        flex-direction: column; /* Muda a direção do layout dos grupos de inputs para coluna em telas menores */
+        overflow-y: scroll; /* Adiciona rolagem vertical ao grupo de inputs em telas menores */
+        flex-wrap: wrap; /* Permite quebra de linha para o grupo de inputs em telas menores */
+    }
+
+    .gender-inputs {
+        margin-top: 2rem; /* Adiciona uma margem superior aos inputs de gênero em telas menores */
+    }
+
+    .gender-group {
+        flex-direction: column; /* Muda a direção do layout do grupo de gênero para coluna em telas menores */
+    }
+
+    .gender-input {
+        margin-top: 0.5rem; /* Adiciona uma margem superior aos inputs de gênero em telas menores */
+    }
+}
