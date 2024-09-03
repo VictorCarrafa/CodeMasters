@@ -1,0 +1,31 @@
+.footer__content {
+    position: fixed;/* Fixar o cabeçalho no topo da página */
+    bottom: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho ao lado esquerdo da página */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    background-image:linear-gradient(to left,#ff8c00, #d37400, #b86500); /* Fundo do cabeçalho em gradiente */
+    font-size: 15px;
+    font-family: sans-serif;
+    text-shadow: 1px;
+    display: grid;
+    grid-auto-flow: column; /* Alinha itens em uma linha */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.social {
+    display: flex;
+    list-style-type: none; /* Remove os marcadores */
+    margin: 5px;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+.textFooter{
+    margin-left: 5px;
+    font-weight: 700;
+}

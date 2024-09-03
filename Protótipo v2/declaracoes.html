@@ -5,33 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeMasters</title>
     <link rel="shortcut icon" href="midia/cronometro.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/declaracoes.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <a href="index.html">Registro</a>
         <a href="frequencia.html">Frequência</a>
-        <a href="declaracoes.html">Declarações</a>
-        <a href="cadastro.html">Cadastro</a>
+        <a href="declaracoes.html">Declarações/Documentação</a>
+        <a href="cadastro1.html">Cadastro</a>
     </header>
-    <h1>teste2</h1>
+    <form id="declaracao-form">
+        <label class="titledocs" for="documentos">Escolha a documentação para análise:</label>
+        <select id="documentos" name="documentos" required>
+            <option value="" disabled selected>Escolha a documentação</option>
+            <option value="atMed">Atestado Médico</option>
+            <option value="dh">Declaração de Horas</option>
+            <option value="ds">Doação de Sangue</option>
+            <option value="vestib">Vestibular</option>
+            <option value="cc">Certidão de Casamento</option>
+        </select>
+
+        <label class="titledocs" for="dias-mes">Dia(s) e Mês:</label>
+        <input type="text" id="dias-mes" name="dias-mes" placeholder="Ex: 01-05 Agosto" required>
+
+        <label class="titledocs" for="documento">Documentos:</label>
+        <input type="file" id="documento" name="documento" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('declaracao-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Exibe o alerta
+            alert('A declaração foi enviada e será analisada.');
+
+            // Limpa os campos do formulário
+            this.reset();
+        });
+    </script>
 
     <footer>
         <div class="footer__content">
             <p class="textFooter">© 2024 CodeMasters. Todos os direitos reservados.</p>
             <ul class="social">
                 <li>
-                    <a href="#" target="_blank" rel="nofollow" alt="ao3 Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="nofollow" alt="Instagram"><i class="fab fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" rel="nofollow" alt="ao3 Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="nofollow" alt="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" rel="nofollow" alt="ao3 Linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" rel="nofollow" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" rel="nofollow" alt="ao3 Youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="nofollow" alt="Youtube"><i class="fab fa-youtube"></i></a>
                 </li>
             </ul>
         

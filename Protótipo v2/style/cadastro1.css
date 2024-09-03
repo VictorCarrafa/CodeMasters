@@ -1,0 +1,136 @@
+@charset "UTF-8"; /*define a codificação de caracteres*/
+
+/* Define o estilo do cabeçalho */
+header {
+    position: fixed;/* Fixar o cabeçalho no topo da página */
+    top: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho ao lado esquerdo da página */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    background-image:linear-gradient(to left,#ff8c00, #d37400, #b86500) ;/* Fundo do cabeçalho em gradiente */
+    padding: 5px; /* Adiciona um pouco de espaçamento interno */
+    font-size: 15px;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    text-align: center; /* Alinha o texto no centro */
+    font-family: sans-serif;
+    text-shadow: 1px;
+}
+
+nav {
+    color: black;
+    padding: 5px; /* Adiciona um espaçamento interno */
+    box-shadow: 0px 3px 3px black; /* Adiciona uma sombra preta de 3 pixels na parte inferior */
+    text-align: center; /* Centraliza o texto e links dentro do nav */
+}
+
+/* Estilo para os links diretos dentro de <nav> */
+a {
+    color: black; /* Define a cor do texto */
+    padding: 6px; /* Adiciona um espaçamento interno de pixels ao redor do texto do link */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    transition-duration: .5s; /* Define a duração da transição para efeitos visuais ao passar o mouse */
+}
+
+/* Estilo para os links dentro de <nav> ao passar o mouse */
+header a:hover {
+    color: #f8f7f7; /* Muda a cor do texto para preto quando o mouse está sobre o link */
+}
+/*-------------------------------------------------------------------------------------------*/
+
+body {
+    background-color: #000000;
+    display: flex;/**/justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #3d3c3c;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.308);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b86500;
+    font-family: 24px;
+    font-family: sans-serif;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #d37400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+.funcionarios-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.funcionarios-lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer__content {
+    position: fixed;/* Fixar o cabeçalho no topo da página */
+    bottom: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho ao lado esquerdo da página */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    background-image:linear-gradient(to left,#ff8c00, #d37400, #b86500); /* Fundo do cabeçalho em gradiente */
+    font-size: 15px;
+    font-family: sans-serif;
+    text-shadow: 1px;
+    display: grid;
+    grid-auto-flow: column; /* Alinha itens em uma linha */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    gap: 10px; /* Espaçamento entre os itens */
+    color: black;
+}
+
+.social {
+    display: flex;
+    list-style-type: none; /* Remove os marcadores */
+    margin: 5px;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+.textFooter{
+    margin-left: 5px;
+    font-weight: 700;
+}

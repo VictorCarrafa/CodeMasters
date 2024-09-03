@@ -32,10 +32,9 @@ a {
 }
 
 /* Estilo para os links dentro de <nav> ao passar o mouse */
-.header a:hover {
-    color: #ff8c00; /* Muda a cor do texto para preto quando o mouse está sobre o link */
+header a:hover {
+    color: #f8f7f7; /* Muda a cor do texto para preto quando o mouse está sobre o link */
 }
-
 /*-------------------------------------------------------------------------------------------*/
 
 body {
