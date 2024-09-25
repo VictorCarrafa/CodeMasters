@@ -1,0 +1,99 @@
+@charset "UTF-8"; /*define a codificação de caracteres*/
+
+body {
+    background-color: #D9E4FA;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: black;
+}
+
+.form-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 125px auto;
+    padding: 40px;
+    background-color: #9698FF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 25px; 
+}
+
+h1 {
+    color: black;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+label {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.message-container {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D9E4FA;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+/* Estilos específicos para mensagens de sucesso */
+#successMessage {
+    background-color: #4CAF50;
+}
+
+/* Estilos específicos para mensagens de remoção */
+#removeMessage {
+    background-color: #f44336;
+}
+
+/* Estilos para o elemento <button> */
+
+#saveButton, #removeButton {
+    padding: 10px 15px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+#saveButton {
+    background-color: green;
+    color: white;
+}
+
+#saveButton:hover {
+    background-color: darkgreen;
+}
+
+#removeButton {
+    background-color: red;
+    color: white;
+}
+
+#removeButton:hover {
+    background-color: rgb(187, 37, 37);
+}
+

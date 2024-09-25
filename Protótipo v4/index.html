@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMasters</title>
+    <link rel="shortcut icon" href="midia/cronometro.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="scripts/config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/header.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Registro</a>
+        <a href="frequencia.html">Frequência</a>
+        <a href="declaracoes.html">Declarações</a>
+        <a href="cadastro1.html">Cadastro</a>
+    </header>
+    <div class="container">
+        <h1>Registro de Ponto</h1>
+        <div class="select-box">
+            <h4 for="ponto">Selecione o Ponto:</h4>
+            <select id="ponto">
+                <option value="entrada">ENTRADA</option>
+                <option value="saida intervalo">SAÍDA PARA INTERVALO</option>
+                <option value="retorno intervalo">RETORNO DO INTERVALO</option>
+                <option value="saida">SAÍDA</option>
+            </select>
+        </div>
+
+        <button id="registrar">Registrar</button>
+        <div id="registro-container">
+            <h2>Registros:</h2>
+            <ul id="registros"></ul>
+        </div>
+    </div>
+<br>
+    <script src="scripts/script.js"></script>
+    
+    <footer>
+        <div class="footer__content">
+            <p class="textFooter">© 2024 CodeMasters. Todos os direitos reservados.</p>
+            <ul class="social">
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Instagram"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Youtube"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        
+        </div>
+        
+    </footer>
+    
+    
+</body>
+
+</html>

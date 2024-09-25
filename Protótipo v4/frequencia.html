@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMasters</title>
+    <link rel="shortcut icon" href="midia/cronometro.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/header.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Ponto</h1>
+        <div id="relatorio-container">
+            <ul id="relatorio"></ul>
+        </div>
+        <button id="baixar-relatorio">Baixar Relatório</button>
+    </div>
+    <script>
+        // Função para carregar os registros do localStorage
+        const carregarRelatorio = () => {
+            const registrosPontos = JSON.parse(localStorage.getItem('registrosPontos')) || [];
+            const ulRelatorio = document.getElementById('relatorio');
+            ulRelatorio.innerHTML = ''; // Limpar qualquer conteúdo existente
+    
+            if (registrosPontos.length === 0) {
+                const li = document.createElement('li');
+                li.textContent = 'Nenhum registro de ponto encontrado.';
+                ulRelatorio.appendChild(li);
+            } else {
+                registrosPontos.forEach(registro => {
+                    const li = document.createElement('li');
+                    li.textContent = `${registro.tipo}: ${registro.data} ${registro.hora}`;
+                    ulRelatorio.appendChild(li);
+                });
+            }
+        };
+    
+        carregarRelatorio(); // Carregar o relatório ao iniciar
+    
+        // Função para baixar o relatório em formato de texto
+        document.getElementById('baixar-relatorio').addEventListener('click', function() {
+            const registrosPontos = JSON.parse(localStorage.getItem('registrosPontos')) || [];
+            if (registrosPontos.length === 0) {
+                alert('Nenhum registro de ponto para baixar.');
+                return;
+            }
+    
+            let relatorio = 'Relatório de Ponto\n\n';
+            registrosPontos.forEach(registro => {
+                relatorio += `${registro.tipo}: ${registro.data} ${registro.hora}\n`;
+            });
+    
+            const blob = new Blob([relatorio], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'relatorio-ponto.txt';
+            link.click();
+        });
+    </script>
+    
+    <header>
+        <a href="index.html">Registro</a>
+        <a href="frequencia.html">Frequência</a>
+        <a href="declaracoes.html">Declarações</a>
+        <a href="cadastro1.html">Cadastro</a>
+    </header>
+   
+
+    <footer>
+        <div class="footer__content">
+            <p class="textFooter">© 2024 CodeMasters. Todos os direitos reservados.</p>
+            <ul class="social">
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Instagram"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="nofollow" alt="Youtube"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+        
+        </div>
+        
+    </footer>
+</body>
+</html>

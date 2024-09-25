@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMasters</title>
+    <link rel="shortcut icon" href="midia/cronometro.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/declaracoes.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/header.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Registro</a>
+        <a href="frequencia.html">Frequência</a>
+        <a href="declaracoes.html">Declarações</a>
+        <a href="cadastro1.html">Cadastro</a>
+    </header>
+    <div class="container">
+        <h1>Envio de Declarações</h1>
+        <form id="declaracao-form">
+            <b></b><label for="tipo-declaracao">Tipo de Declaração:</label></b>
+            <select id="tipo-declaracao" required>
+                <option value="">Selecione</option>
+                <option value="atestado-medico">Atestado Médico</option>
+                <option value="declaracao-horas">Declaração de Horas</option>
+                <option value="licenca-nojo">Licença Nojo</option>
+            </select>
+
+            <label for="periodo">Período:</label>
+            <input type="text" id="periodo" placeholder="Selecione o período" required>
+            <label for="arquivo">Anexar Documento:</label>
+            <input type="file" id="arquivo" accept=".pdf,.jpg,.png,.doc,.docx" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Inicializa o Flatpickr para selecionar múltiplos dias
+    flatpickr("#periodo", {
+        mode: "range",
+        dateFormat: "d/m/Y", // Formato de data (dia/mês/ano)
+        locale: "pt" // Definir a linguagem para português
+    });
+
+    // Função para enviar a declaração
+    document.getElementById('declaracao-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const tipoDeclaracao = document.getElementById('tipo-declaracao').value;
+        const periodo = document.getElementById('periodo').value;
+        const arquivo = document.getElementById('arquivo').files[0];
+
+        if (!tipoDeclaracao || !periodo || !arquivo) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // Simular envio e mostrar mensagem de sucesso
+        
+        alert("Declaração enviada com sucesso!");
+        
+        // Limpar o formulário após o envio
+        document.getElementById('declaracao-form').reset();
+        periodoInput.type = 'text'; // Voltar o input para texto vazio
+
+    });
+});
+
+    </script>
+
+<footer>
+    <div class="footer__content">
+        <p class="textFooter">© 2024 CodeMasters. Todos os direitos reservados.</p>
+        <ul class="social">
+            <li>
+                <a href="#" target="_blank" rel="nofollow" alt="Instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" rel="nofollow" alt="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" rel="nofollow" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" rel="nofollow" alt="Youtube"><i class="fab fa-youtube"></i></a>
+            </li>
+        </ul>
+    
+    </div>
+    
+</footer>
+</body>
+</html>

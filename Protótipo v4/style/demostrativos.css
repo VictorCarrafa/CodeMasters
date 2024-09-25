@@ -1,0 +1,13 @@
+@charset "UTF-8"; /*define a codificação de caracteres*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #212426; 
+    width: 100%;
+}
